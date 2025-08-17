@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Gestión de Terceros</h2>
+<ul>
+    <li><a href="{% url 'crear_tercero' %}">Crear Tercero</a></li>
+    <li><a href="{% url 'modificar_tercero' %}">Modificar Tercero</a></li>
+    <li><a href="{% url 'visualizar_terceros' %}">Visualizar Terceros</a></li>
+</ul>
+{% endblock %}

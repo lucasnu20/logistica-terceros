@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Visualizar Terceros</h2>
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>CUIT</th>
+        <th>Contacto</th>
+        <th>Email</th>
+        <th>Teléfono</th>
+        <th>Región</th>
+    </tr>
+    {% for t in terceros %}
+    <tr>
+        <td>{{ t.nombre }}</td>
+        <td>{{ t.cuit }}</td>
+        <td>{{ t.contacto_principal }}</td>
+        <td>{{ t.email }}</td>
+        <td>{{ t.telefono }}</td>
+        <td>{{ t.region }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="{% url 'menu_terceros' %}">Volver al menú</a>
+{% endblock %}

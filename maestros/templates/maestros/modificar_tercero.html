@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Modificar Tercero</h2>
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>CUIT</th>
+        <th>Editar</th>
+    </tr>
+    {% for t in terceros %}
+    <tr>
+        <td>{{ t.nombre }}</td>
+        <td>{{ t.cuit }}</td>
+        <td><a href="{% url 'editar_tercero' t.pk %}">Editar</a></td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="{% url 'menu_terceros' %}">Volver al menú</a>
+{% endblock %}
