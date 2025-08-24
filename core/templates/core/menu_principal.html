@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block header %}Menú Principal del Sistema{% endblock %}
+
+{% block content %}
+<ul>
+    <li><a href="{% url 'menu_maestros' %}">Módulo Maestros</a></li>
+    <li><a href="#">Módulo Negociaciones (Próximamente)</a></li>
+    <li><a href="#">Módulo Facturación (Próximamente)</a></li>
+    <li><a href="#">Reportes (Próximamente)</a></li>
+</ul>
+{% endblock %}

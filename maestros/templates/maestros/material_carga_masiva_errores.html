@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Errores en la carga masiva</h2>
+<p>No se han creado materiales debido a los siguientes errores:</p>
+<ul>
+    {% for error in errores %}
+    <li>{{ error }}</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'material_carga_masiva' %}">Volver a cargar Excel</a>
+{% endblock %}

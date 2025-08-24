@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Listado de Materiales</h2>
+
+<form method="get" action=".">
+    <input type="text" name="q" placeholder="Buscar por nombre..." value="{{ request.GET.q }}">
+    <button type="submit">Buscar</button>
+</form>
+
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>Tercero</th>
+        <th>Categoria</th>
+        <th>Unidad</th>
+        <th>Acciones</th>
+    </tr>
+    {% for m in materiales %}
+    <tr>
+        <td>{{ m.nombre }}</td>
+        <td>{{ m.tercero.nombre }}</td>
+        <td>{{ m.categoria }}</td>
+        <td>{{ m.unidad_medida }}</td>
+        <td><a href="{% url 'material_editar' m.pk %}">Editar</a></td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="{% url 'menu_materiales' %}">Volver al menú</a>
+{% endblock %}

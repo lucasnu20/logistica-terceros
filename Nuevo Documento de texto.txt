@@ -1,0 +1,5 @@
+visualizar materiales muestre todos los datos del material, completos.
+visualizar materiales no debería permitir editar. 
+modificar materiales permita ir a la vista de visualización y permita eliminar materiales.
+agregar vista y template para "bloquear" terceros, idem a SAP.
+revisar asignación de código material. A la hora de hacer carga masiva de materiales por Excel debería validar que no exista ese código. El código debería ser univoco.

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Gestión de Materiales</h2>
+
+<ul>
+    <li><a href="{% url 'material_crear' %}">Crear Material</a></li>
+    <li><a href="{% url 'material_listar' %}">Visualizar Materiales</a></li>
+    <li><a href="{% url 'material_editar_menu' %}">Editar Material</a></li>
+    <li><a href="{% url 'material_carga_masiva' %}">Carga Masiva desde Excel</a></li>
+</ul>
+{% endblock %}

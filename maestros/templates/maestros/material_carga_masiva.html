@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Carga Masiva de Materiales</h2>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label>Archivo Excel:</label>
+    <input type="file" name="archivo" accept=".xlsx">
+    <button type="submit">Importar</button>
+</form>
+<p>El Excel debe tener las columnas: nombre, descripcion, tercero, categoria, unidad_medida, peso_neto, peso_bruto, alto, ancho, largo, condiciones_almacenamiento, codigo_barras, valor_declarado, moneda</p>
+<a href="{% url 'menu_materiales' %}">Volver al menú</a>
+{% endblock %}

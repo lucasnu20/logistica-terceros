@@ -11,4 +11,11 @@ urlpatterns = [
     path('terceros/modificar/', views.modificar_tercero, name='modificar_tercero'),
     path('terceros/modificar/<int:pk>/', views.editar_tercero, name='editar_tercero'),
     path('terceros/visualizar/', views.visualizar_terceros, name='visualizar_terceros'),
+    # Sección: Materiales
+    path('materiales/', views.menu_materiales, name='menu_materiales'),
+    path('materiales/crear/', views.material_crear, name='material_crear'),
+    path('materiales/listar/', views.material_listar, name='material_listar'),
+    path('materiales/editar/', views.material_editar_menu, name='material_editar_menu'),
+    path('materiales/editar/<int:pk>/', views.material_editar, name='material_editar'),
+    path('materiales/carga_masiva/', views.material_carga_masiva, name='material_carga_masiva'),
 ]
